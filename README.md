@@ -1,6 +1,6 @@
 # Centro Integral de Operaciones 911
 
-![Universidad Logo](./logo.png)
+![Universidad Logo](./src/main/resources/assets/logo.png)
 
 ## Licenciatura en Informática
 ### Seminario de Práctica de Informática
