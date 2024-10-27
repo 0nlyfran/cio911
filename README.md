@@ -29,7 +29,10 @@ Esta estructura está diseñada para cumplir con las mejores prácticas de desar
 
 ### Tecnologías Utilizadas
 
-- **Desktop:** JavaFX
+- **Lenguaje:** Java
+- **Gestor de dependencias:** Maven
+- **Desktop Framework:** JavaFX
+- **Contenedor:** Docker
 - **Base de datos:** MySQL
 
 ---
