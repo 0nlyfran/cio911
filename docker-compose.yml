@@ -1,0 +1,19 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: roottYYlKq3GFKawg
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userx3CSuCL35xLcC
+      TZ: "America/Argentina/Buenos_Aires" # Zona horaria para UTC-3
+      LANG: C.UTF-8 # Soporte para acentos
+    ports:
+      - "13306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./src/main/resources/db/mysql-init:/docker-entrypoint-initdb.d # Montar los scripts SQL
+volumes:
+  mysql_data:

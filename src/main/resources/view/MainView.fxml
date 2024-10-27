@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Pane id="logo" layoutX="-5.0" prefHeight="100.0" prefWidth="206.0" style="-fx-background-color: #2A1C42;">
+         <children>
+            <Text fill="WHITE" layoutX="3.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIO 911" textAlignment="CENTER" wrappingWidth="200.0">
+               <font>
+                  <Font name="Eras Demi ITC" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <VBox id="menu" layoutY="100.0" prefHeight="633.0" prefWidth="200.0" style="-fx-background-color: #3F2B63;">
+         <children>
+            <Button fx:id="btnDashboard" mnemonicParsing="false" onMouseClicked="#goToDashboardView" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #3F2B63;" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnIncident" mnemonicParsing="false" onMouseClicked="#goToIncidentView" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #3F2B63;" text="Módulo Incidente" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btnDispatch" mnemonicParsing="false" onMouseClicked="#goToDispatchView" prefHeight="51.0" prefWidth="289.0" style="-fx-background-color: #3F2B63;" text="Módulo Despacho" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane id="header" layoutX="200.0" layoutY="-1.0" prefHeight="100.0" prefWidth="824.0" style="-fx-background-color: #A74CE4;">
+         <children>
+            <Text fill="WHITE" layoutX="8.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="countCodeTotal" fill="WHITE" layoutX="680.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S/D" wrappingWidth="104.6622314453125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="537.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalidad:">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Pane id="body" layoutX="202.0" layoutY="101.0" prefHeight="633.0" prefWidth="824.0">
+         <children>
+            <GridPane layoutX="21.0" layoutY="21.0" prefHeight="587.0" prefWidth="777.0" style="-fx-background-color: #E2CFFF;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="473.6665954589844" minWidth="10.0" prefWidth="377.6666666666667" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.33331298828125" minWidth="5.666666666666686" prefWidth="5.666666666666686" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.999979654948" minWidth="10.0" prefWidth="393.999979654948" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="143.33331298828125" minHeight="0.0" prefHeight="50.666656494140625" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="341.33333333333337" minHeight="10.0" prefHeight="62.99998982747396" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="341.33333333333337" minHeight="10.0" prefHeight="154.66666666666663" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="305.6667175292969" minHeight="10.0" prefHeight="54.333333333333314" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="305.6667175292969" minHeight="0.0" prefHeight="35.000040690104186" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="330.0000305175781" minHeight="10.0" prefHeight="28.333282470703125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="330.0000305175781" minHeight="10.0" prefHeight="206.3333841959635" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="CÓDIGO ROJO" textAlignment="CENTER" wrappingWidth="386.2049865722656">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Text>
+                  <Text fill="#fcff00" strokeType="OUTSIDE" strokeWidth="0.0" text="CÓDIGO AMARILLO" textAlignment="CENTER" wrappingWidth="385.62108612060547" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Text>
+                  <Text fill="#01d962" strokeType="OUTSIDE" strokeWidth="0.0" text="CÓDIGO VERDE" textAlignment="CENTER" wrappingWidth="385.1692199707031" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Text>
+                  <Text fill="#00ccff" strokeType="OUTSIDE" strokeWidth="0.0" text="CÓDIGO CELESTE" textAlignment="CENTER" wrappingWidth="383.1268844604492" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DELITO CON COMPROMISO DE INTEGRIDAD FÍSICA. (Situación de extrema urgencia)." textAlignment="CENTER" wrappingWidth="384.96160888671875" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DELITO SIN RIESGO APARENTE DE VIDA, al menos en forma inminente. (Situación que requiere restablecer el orden público)." textAlignment="CENTER" wrappingWidth="381.57623291015625" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRAVENCIÓN. (No implica riesgo de vida)." textAlignment="CENTER" wrappingWidth="389.49542236328125" GridPane.rowIndex="5" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="OTRO TIPO DE LLAMADA." textAlignment="CENTER" wrappingWidth="387.46092224121094" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Text fx:id="countCodeRed" strokeType="OUTSIDE" strokeWidth="0.0" text="S/D" textAlignment="CENTER" wrappingWidth="389.91668701171875" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="countCodeYellow" strokeType="OUTSIDE" strokeWidth="0.0" text="S/D" textAlignment="CENTER" wrappingWidth="389.25" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="countCodeGreen" strokeType="OUTSIDE" strokeWidth="0.0" text="S/D" textAlignment="CENTER" wrappingWidth="389.25" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="countCodeLigthBlue" strokeType="OUTSIDE" strokeWidth="0.0" text="S/D" textAlignment="CENTER" wrappingWidth="389.25" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Text>
+                  <Line endX="676.2929077148438" endY="-4.933277887175791E-5" startX="-100.0" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Line endX="383.0" endY="17.333328247070312" layoutX="10.0" layoutY="10.0" startX="383.0" startY="595.3333740234375" />
+         </children></Pane>
+      <Pane id="footer" layoutY="733.0" prefHeight="35.0" prefWidth="1024.0" style="-fx-background-color: #2A1C42;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dev Francisco Arizaga">
+               <font>
+                  <Font name="Rubik-Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="960.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="v1.0.0">
+               <font>
+                  <Font name="Rubik-Bold" size="16.0" />
+               </font>
+            </Text>
+         </children></Pane>
+   </children>
+</AnchorPane>
