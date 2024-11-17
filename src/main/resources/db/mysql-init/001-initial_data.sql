@@ -616,6 +616,7 @@ INSERT INTO cio911.cancellation_reason (id, reason) VALUES(15, 'DOMICILIO INEXIS
 INSERT INTO cio911.cancellation_reason (id, reason) VALUES(16, 'NO RESPONDE LA RADIO');
 INSERT INTO cio911.cancellation_reason (id, reason) VALUES(17, 'CON DENUNCIANTE');
 INSERT INTO cio911.cancellation_reason (id, reason) VALUES(18, 'Apoyo a personal');
+INSERT INTO cio911.cancellation_reason (id, reason) VALUES(19, '0 - Sin motivo de cancelación');
 
 -- attention_type
 ALTER TABLE cio911.attention_type AUTO_INCREMENT = 1;
